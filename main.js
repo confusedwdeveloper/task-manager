@@ -42,5 +42,13 @@ const changeCompleted = function (i) {
 }
 changeCompleted(6)
 
+// Now I will add a function to change task description
+const changeTask = function(i,t) {
+  let x = accounts.find(function (item) {
+    return item.id === i
+  })
+  return x.task = t
+}
+ changeTask(4,'eat smart')
 
 console.log(accounts)
