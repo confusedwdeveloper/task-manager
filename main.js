@@ -8,7 +8,7 @@ const addAccount = function (n,t,c){
     accounts.push({
       id: n,
       task: t,
-      completed: c
+      completed: c,
     })
   } else {
     console.log('Please check your ID and try again')
@@ -30,7 +30,17 @@ const deleteAccount = function (i) {
     console.log(`Account with id ${i} not found`)
   }
 }
-deleteAccount(6)
+deleteAccount(2)
 //Successfully added a function to delete account
 
-//console.log(accounts)
+// Now I will try to add a function for changing completed status for individual items(objects)
+const changeCompleted = function (i) {
+  const x = accounts.find(function (item, index) {
+    return item.id === i
+  })
+  return x.completed = !x.completed
+}
+changeCompleted(6)
+
+
+console.log(accounts)
